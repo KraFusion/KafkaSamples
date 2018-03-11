@@ -20,15 +20,16 @@ public class KafkaProducerApp
         
         KafkaProducer<String, String> myProducer = new KafkaProducer<String, String>(props);
         
-        ProducerRecord<String, String> myRecord = new ProducerRecord<String, String>("my_topic", "My-Message_Key", "My Message 3");
-        
         try {
-			myProducer.send(myRecord);
+        	// send over 25 messages
+        	for (int i = 0; i < 25; i++) {
+        		myProducer.send(new ProducerRecord<String, String>("my_topic", Integer.toString(i), "My Message " + Integer.toString(i)));
+			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			myProducer.close();
 		}
-        
-        myProducer.close();
     }
 }
