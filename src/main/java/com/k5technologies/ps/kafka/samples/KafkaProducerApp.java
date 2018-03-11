@@ -7,6 +7,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 
 /**
  * Kafka Sample
+ * @author Joey Krabacher ( K5 Technologies)
  *
  */
 public class KafkaProducerApp 
