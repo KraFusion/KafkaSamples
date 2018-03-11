@@ -21,3 +21,6 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my_topic
 
 Import this Java project into your IDE of choice and run.
 You should get a an output of how ever many messages your producer sent in your consumer terminal window
+
+
+/*  Joey */
